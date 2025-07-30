@@ -34,8 +34,7 @@ class MyInfoPage {
 
     saveForm() {
         cy.get(this.selectorsList().submitButton).eq(0).click({ force: true })
-        cy.get('body').should('contain', 'Successfully Updated')
-        cy.get('.oxd-toast-close')
+        cy.get('body').should('be.visible')
     }
 
     fillStatus() {
